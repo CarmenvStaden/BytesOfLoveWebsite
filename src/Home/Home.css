@@ -11,7 +11,8 @@
     text-align: center;
     align-content: center;
     width: 60vw;
-    height: 65vh;
+    height: auto;           /* Maintain aspect ratio when scaling*/
+    max-height: 65vh;       /* Ensures that auto height does not scale past desired*/
     /* outline: 2px solid red;  */
 }
 
@@ -52,3 +53,15 @@
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     font-size: 2.5vh;
 }
+
+/* Media query to adjust styling for mobile */
+@media (max-width: 600px) {
+    .picture-carousel {
+        width: 90vw;
+        height: auto;
+        max-height: 50vh;
+    }
+} 
+
+
+   
